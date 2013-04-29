@@ -1,0 +1,20 @@
+{
+  "name": "timer",
+  "subdomain": "pruthvikar-timer",
+  "scripts": {
+    "start": "node timer.js"
+  },
+  "domains": [
+    "tedmedliveimperial.com",
+    "timer.tedmedliveimperial.com"
+  ],
+  "version": "0.0.2-1",
+  "dependencies": {
+    "express": "3.x.x",
+    "ejs": "~0.7.1",
+    "socket.io": "~0.9.6"
+  },
+  "engines": {
+    "node": "0.8.x"
+  }
+}

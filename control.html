@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title >Control</title>
+		</script>
+
+		<script src='/socket.io/socket.io.js'></script>
+		<script>
+			var socket = io.connect();
+			
+		function reset(time){
+			socket.emit('resrec', {'now': time});
+		}
+	
+	
+		</script>
+
+		<style type='text/css'>
+		h1 {
+		    left: 0;
+		    line-height: 200px;
+		    margin-top: -100px;
+		    position: absolute;
+		    text-align: center;
+		    top: 30%;
+		    width: 100%;
+		    font: 100px Helvetica;
+		}
+		button{
+			font: 100px Helvetica;
+			padding:10px 25px;
+		}
+		</style>
+	</head>
+	<body>
+		<h1><a href="./">Go To Timer<a></h>
+		</br>
+		</br>
+		<button type="button" onclick="reset(18)">18</button>
+		<button type="button" onclick="reset(15)">15</button>
+		<button type="button" onclick="reset(12)">12</button>
+	</body>
+</html>

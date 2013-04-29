@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title >Timer</title>
+		</script>
+
+		<script src='/socket.io/socket.io.js'></script>
+		<script>
+				var socket = io.connect();
+				var intrvl=0;
+				var time;
+				var flash=0;
+				socket.on('welcome', function(data) {
+					document.getElementById("timer").innerHTML=data.Now;
+				});
+				
+				socket.on('ressen', function(data) {
+					
+					document.getElementById("timer").innerHTML=data.Now;
+					if (data.flash==1)
+					{
+					setTimeout(function(){document.bgColor='purple';setTimeout(function(){document.bgColor='white';},100)},100)
+						
+					}
+					else {
+						clearInterval(flicker);
+						document.bgColor='white';
+					}
+					
+				});
+				
+			
+			
+				
+			
+				
+				//socket.on('data from server', function(data) {
+					
+					//});
+					
+					//red
+					
+				
+				
+		</script>
+
+		<style type='text/css'>
+		h1 {
+		    left: 0;
+		    line-height: 200px;
+		    margin-top: -100px;
+		    position: absolute;
+		    text-align: center;
+		    top: 50%;
+		    width: 100%;
+		    font: 200px Helvetica;
+		}
+		</style>
+	</head>
+	<body>
+		<h1 ><a id="timer" href="./control">Begin</h1>
+	</body>
+</html>
